@@ -23,6 +23,8 @@
   
 ***Some Knowledge***  
 * Clean Architecture - SRP(Single Responsibility Principle etc.)  
-* AWS Services.  
+* AWS Services - Cloud Watch, Logsdash.
 * ElasticSearch/Kibana Combo. 
 ### Post-Implementation  
+***Starting Points***  
+Still Learning. - I am gonna play PUBG!!!
