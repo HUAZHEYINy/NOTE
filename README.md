@@ -5,7 +5,7 @@
 ***Starting Points***
 * Understand the funcitonal user requirements - from basic to details.
 * Estimate the users requirements - understand the priority. 
-* Understand the non-functional user requirments - e.g. SLA, latency, TPS, scale, authentication, more read less write, more write less reader, both massive read and write, cost.  
+* Understand the non-functional user requirments - e.g. SLA, latency, TPS, scale, authentication, TPS, more read less write, more write less reader, both massive read and write(Caching), cost.  
 * High-Level architecture design - Skeleton design.
 
 ***Some knowledge***  
@@ -17,7 +17,7 @@
 ### Implementation  
 ***Starting Points***
 * Implementation of skeleton design - focus more on extensibility.   
-* Error Handling - Retryable/NonRetryable Exceptions( Error/Faults/Failures Cases), Failure Recovery Mechanism, Failure Notificatio Mechanism. 
+* Error Handling - Retryable/NonRetryable Exceptions( Error/Faults/Failures Cases), Failure Recovery Mechanism, Failure Notification Mechanism. 
 * Backup Mechanisms - One authoritative Storage.
 * Monitoring and Logging - Data Visualization(KPI),  Logging Storage and Analyzing Mechanism.
   
@@ -25,6 +25,10 @@
 * Clean Architecture - SRP(Single Responsibility Principle etc.)  
 * AWS Services - Cloud Watch, Logsdash.
 * ElasticSearch/Kibana Combo. 
+***
+
 ### Post-Implementation  
 ***Starting Points***  
-Still Learning. - I am gonna play PUBG!!!
+* Load Testing - Tune Service and Get the TPS(More Understand about the service).
+* Throttling - Protective Mechanism.
+* Maintenance - Refactor Code and Resolve Technical Debt, Build Emergency Responsive Mechanism(On-call.), Improve Service(Dynamic Configuration.)
