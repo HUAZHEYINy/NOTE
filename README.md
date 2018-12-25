@@ -17,9 +17,9 @@
 ### Implementation  
 ***Starting Points***
 * Implementation of skeleton design - focus more on extensibility.   
-* Error Handling and Monitoring - Retryable/NonRetryable Exceptions( Error/Faults/Failures Cases), Failure Recovery Mechanism, Failure Notificatio Mechanism. 
+* Error Handling - Retryable/NonRetryable Exceptions( Error/Faults/Failures Cases), Failure Recovery Mechanism, Failure Notificatio Mechanism. 
 * Backup Mechanisms - One authoritative Storage.
-* Data Visualization - Data Analysis(KPI).
+* Monitoring and Logging - Data Visualization(KPI),  Logging Storage and Analyzing Mechanism.
   
 ***Some Knowledge***  
 * Clean Architecture - SRP(Single Responsibility Principle etc.)  
