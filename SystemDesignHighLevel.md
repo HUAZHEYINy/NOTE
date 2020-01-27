@@ -8,8 +8,7 @@
   *  Estimate the efforts and cost.
 * Understand the non-functional user requirments.
   * e.g SLA, latency, TPS, scale, authentication mechanism, more read less write, more write less reader, both massive read and write(Caching), cost.  
-* High-Level architecture design.
-  * High level skeleton design without detailed the implementation.
+* Extended requirements - Requirements other than P0.  
 
 ***Some knowledge***  
 * Use Case Diagram
@@ -19,7 +18,7 @@
 ***  
 ### In-Design  
 ***Starting Points***
-* Detailed the skeleton design.
+* Detailed the skeleton design. (API Definition; Data Design; System Design and Algorithm)
   * First, Satisfy P0 requirements.
   * Second, Consider extensibility/scalability. e.g scale to support more use cases; scale to support more users; select proper componenets
 * Error Handling.  
