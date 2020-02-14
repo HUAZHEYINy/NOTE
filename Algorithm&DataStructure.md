@@ -1,6 +1,6 @@
 ### Disjoint-set  并查集    
 ##### What  
-* Group N distict elements into a collection of disjoint set.  
+* Group N distinct elements into a collection of disjoint set.  
 * Perform: find the unique set that contains the given element; Unite two sets for given element A & B.  
 * Each set has a representative element.
 ##### Methods  
