@@ -1,3 +1,21 @@
+- [Disjoint-set  并查集](#disjoint-set-----)
+    + [What](#what)
+    + [Methods](#methods)
+    + [Pseudo Code](#pseudo-code)
+    + [Code](#code)
+    + [Img](#img)
+- [Disjoin-set Forests](#disjoin-set-forests)
+    + [What](#what-1)
+    + [Methods](#methods-1)
+    + [Heuristics](#heuristics)
+    + [Pseudo Code](#pseudo-code-1)
+    + [Img](#img-1)
+- [Dynamic Programming](#dynamic-programming)
+    + [What](#what-2)
+    + [Example](#example)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+  
 ### Disjoint-set  并查集    
 ##### What  
 * Group N distinct elements into a collection of disjoint set.  
@@ -59,4 +77,14 @@ FindSet(x)
 ```    
 ##### Img 
 1/  
-![Disjoint Set Forests](https://helloacm.com/wp-images/acm/2012/data-structure/disjoint3.jpg)
+![Disjoint Set Forests](https://helloacm.com/wp-images/acm/2012/data-structure/disjoint3.jpg)  
+  
+### Dynamic Programming ???
+##### What  
+* Method used to solve probelm by combining the solutions to subproblems.
+* Applicable when the sub-problems can be nested recursively inside larger problems. Means the larger problem can be decomposed to sub-problems.    
+* Use additional memory to save computation time. - Time-Memory Trade-Off.
+##### Example  
+* https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture12.pdf   
+* [Code]()  
+* [https://www.cnblogs.com/wkfvawl/p/9372372.html](https://www.cnblogs.com/wkfvawl/p/9372372.html)
