@@ -1,20 +1,27 @@
-- [Disjoint-set  并查集](#disjoint-set-----)
-    + [What](#what)
-    + [Methods](#methods)
-    + [Pseudo Code](#pseudo-code)
-    + [Code](#code)
-    + [Img](#img)
-- [Disjoin-set Forests](#disjoin-set-forests)
-    + [What](#what-1)
-    + [Methods](#methods-1)
-    + [Heuristics](#heuristics)
-    + [Pseudo Code](#pseudo-code-1)
-    + [Img](#img-1)
-- [Dynamic Programming](#dynamic-programming)
-    + [What](#what-2)
-    + [Example](#example)
+- [Data Structure](#data-structure)
+  * [Disjoint-set  并查集](#disjoint-set-----)
+      - [What](#what)
+      - [Methods](#methods)
+      - [Pseudo Code](#pseudo-code)
+      - [Code](#code)
+      - [Img](#img)
+  * [Disjoin-set Forests](#disjoin-set-forests)
+      - [What](#what-1)
+      - [Methods](#methods-1)
+      - [Heuristics](#heuristics)
+      - [Pseudo Code](#pseudo-code-1)
+      - [Img](#img-1)
+- [Search](#search)
+  * [Binary Search](#binary-search)
+      - [What](#what-2)
+      - [Pseudo Code](#pseudo-code-2)
+- [Other](#other)
+  * [Dynamic Programming ???](#dynamic-programming----)
+      - [What](#what-3)
+      - [Example](#example)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
   
 ## Data Structure
 ### Disjoint-set  并查集    
@@ -99,8 +106,7 @@ BinarySearch(array, target)
     
   return -1 
 ``` 
-  
-#####  
+
 ## Other
 ### Dynamic Programming ???
 ##### What  
