@@ -105,7 +105,8 @@ BinarySearch(array, target)
     else left = mid + 1
     
   return -1 
-``` 
+```     
+[Java Implementation](https://github.com/HUAZHEYINy/NOTE/blob/master/Codes/src/Search/BinarySearch/BinarySearch.java)
 
 ## Other
 ### Dynamic Programming ???
