@@ -16,6 +16,7 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
   
+## Data Structure
 ### Disjoint-set  并查集    
 ##### What  
 * Group N distinct elements into a collection of disjoint set.  
@@ -78,7 +79,29 @@ FindSet(x)
 ##### Img 
 1/  
 ![Disjoint Set Forests](https://helloacm.com/wp-images/acm/2012/data-structure/disjoint3.jpg)  
+     
+## Search  
+### Binary Search
+##### What  
+Simple search algorithm that is used find the target from a *sorted array*.     
+Time Complexity: O(Log(n))
+##### Pseudo Code  
+```  
+BinarySearch(array, target) 
+  left = 0
+  right = array.len  
   
+  while(left <= right)  
+    mid = (left + right) / 2
+    if (array[mid] == target) return mid
+    if (array[mid] > target) right = mid - 1
+    else left = mid + 1
+    
+  return -1 
+``` 
+  
+#####  
+## Other
 ### Dynamic Programming ???
 ##### What  
 * Method used to solve probelm by combining the solutions to subproblems.
