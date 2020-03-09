@@ -1,12 +1,10 @@
 # What to consider to build a service.
-*** 
-  
 
 ### Preparation  
 ```  
 During this phase, we will not actually design the system from technical standpoint but rather prepare for the technical design. 
 ``` 
-*** Noteworthy Points ***  
+#### Noteworthy Points #### 
    
 * Understand the functional user requirements.      
 	* Including unstanding the user - Who/How/Why will use the system.
@@ -26,7 +24,7 @@ During this phase, we will not actually design the system from technical standpo
 We start designing the system!  
 The principles are 1. make sure it solves the problems 2. from top to down 3. make decision with a reason 4. OE is part of the design.
 ```
-*** Steps ***  
+#### Steps ####  
 	  
 1. Outline a high level design.  
 	* sketch the main components and connections. e.g Need a DB for storing data; Message Queue System for Async Processing.   
@@ -58,7 +56,7 @@ The principles are 1. make sure it solves the problems 2. from top to down 3. ma
 After implementing the design, We need to ensure our system is stable with current load as well as prepare for the scale.   
 ```
 
-*** Noteworthy Points***      
+#### Noteworthy Points ####      
 
 * Loading Testing  
 	* Understand the Service Bottleneck.    
