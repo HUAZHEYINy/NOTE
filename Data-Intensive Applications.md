@@ -14,7 +14,8 @@ If the data that you're replicating does not change over time then we just need 
 But in reality, the data keeps changing so we have to handle the changes while replicating.   
     
 ### How the Solve the Challenge?  
-Three most popular algorithms for replicating changes between nodes: single-leader; multi-leader; leaderless. 
+Three most popular algorithms for replicating changes between nodes: single-leader; multi-leader; leaderless.   
+
 There are also many trade-offs to consider with replication: for example,   
 * Use Aynchronous or Synchronous replication.  
 * How to handle the failed replicas.
@@ -36,6 +37,28 @@ The replication to follower 1 is synchronous: the leader waits until the followe
 NOTE: Normally, the replication is quite fase but there is no guarantee of how long it might take. There are circumstances when followers might fall bebind the leader by serveral minutes or more. E.g If a follower is recovering from a failure, if the system is operating near maximum capacity, or if there are netowrk problems between the nodes.  
   
 Advantage of Sync: The follower is guaranteed to have an up-to-date copy of the data that is consistent with the leader.  
-Disadvantage of Sync: 
+Disadvantage of Sync: The leader needs to wait for the followers to complete and when the followers do not respond then the write can not succeed and it will block all writes.  
+  
+##### Setup New Followers
+Challenge? Copy the snapshot of one node to the new node is not sufficient as the data is always in flux.   
+Solve with following Steps:  
+1. Leader consitently takes point-in-time snapshot of the database.  
+2. Copy the snapshot to the new node.  
+3. Associate the new node to the leader and request all the data changes that have happened since the snapshot was taken - Needs replication log.  
+4. Once the new node processed the backlog of data changes since the snapshot - then it caught up and continue to process data latest write.  
+  
+##### Handle Followers Failure  
+Similar to Setup New Followers, on its local disk it keeps copy of replication log.   
+
+##### Handle Leader Failure  
+High Level Steps:  
+1. Determining that the leader has failed.  
+2. Choosing a new leader.  
+3. Reconfiguring the system to use the new leader.    
+
+Problems?
+1. When using asynchronous replication, the old leader may have unreplicated writes. Common solution is to discard the unreplicated data.
+2. Split brain - multiple leaders.  
+3. How to define the death of the leader? Not good if too long or too short.
 #### Multi-Leader  
 #### Leaderless
