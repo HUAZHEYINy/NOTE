@@ -11,6 +11,7 @@
       - [Implementation of Replication Logs](#implementation-of-replication-logs)
       - [Problems with Replication Lag](#problems-with-replication-lag)
         * [Read your own writes(Read-after-write)](#read-your-own-writes-read-after-write-)
+        * [Monotonic Reads](#monotonic-reads)
     + [Multi-Leader](#multi-leader)
     + [Leaderless](#leaderless)
 
@@ -98,6 +99,18 @@ Solution:
 * Read from leader if the read SLA is less than x seconds. e.g One minute after the user modified the profile, read from followers. Less than 1 minute then from leader.  
 * Read based on timestamp: e.g Record the timestamp of last write, when read if the machine data has older timestamp than the write one then read from leader or other followers or wait.
 
+##### Monotonic Reads  
+Problem: The same user makes a series of reads but they will see time of the data go backward. e.g User refreshed the web page multiple times but the reads requests are severed from different hosts.
+  
+![Monotic reads problem](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-4%20Monotonic%20Reads.png)  
 
+Solution:  
+* Each users always reads from the same replica. 
+  
+*Additions*  
+* Strong Consistency: All clients will receive the same result at any point in time; Sacrifice the latency.  
+* Eventual Consistency: Not guarantee all clients will receive the same result but will be the same result after some time.  
+* Read-after-write: One of forms of Strong consistency.  
+* *Monotonic Reads*: Between strong consistency and eventual consistency.
 ### Multi-Leader  
 ### Leaderless
