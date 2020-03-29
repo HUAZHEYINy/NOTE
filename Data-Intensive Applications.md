@@ -1,3 +1,19 @@
+- [Charter 5 - Replicaiton](#charter-5---replicaiton)
+  * [What is Replication?](#what-is-replication-)
+  * [Why Replication?](#why-replication-)
+  * [What Challenge from Replication?](#what-challenge-from-replication-)
+  * [How the Solve the Challenge?](#how-the-solve-the-challenge-)
+    + [Single-Leader](#single-leader)
+      - [Synchronous Vs Asyncronous Replication](#synchronous-vs-asyncronous-replication)
+      - [Setup New Followers](#setup-new-followers)
+      - [Handle Followers Failure](#handle-followers-failure)
+      - [Handle Leader Failure](#handle-leader-failure)
+      - [Implementation of Replication Logs](#implementation-of-replication-logs)
+    + [Multi-Leader](#multi-leader)
+    + [Leaderless](#leaderless)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 # Charter 5 - Replicaiton  
   
 ## What is Replication?   
@@ -60,7 +76,7 @@ Problems?
 1. When using asynchronous replication, the old leader may have unreplicated writes. Common solution is to discard the unreplicated data.
 2. Split brain - multiple leaders.  
 3. How to define the death of the leader? Not good if too long or too short. 
-### Implementation of Replication Logs 
+#### Implementation of Replication Logs 
 * Statement-based replication - Leader sends the actual statement to its followers.  
 * Write-ahead Log(WAL) shipping - Leader sends the logs (actual data change) to its followers.  
 * Logical (row-based) log replication - Similar to WAL but the log its in different format which provides more flexibility.  
