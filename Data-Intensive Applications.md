@@ -111,6 +111,15 @@ Solution:
 * Strong Consistency: All clients will receive the same result at any point in time; Sacrifice the latency.  
 * Eventual Consistency: Not guarantee all clients will receive the same result but will be the same result after some time.  
 * Read-after-write: One of forms of Strong consistency.  
-* *Monotonic Reads*: Between strong consistency and eventual consistency.
+* *Monotonic Reads*: Between strong consistency and eventual consistency. 
+  
+##### Consistent Prefix Reads   
+Problem: When the writes are in certain order but when the reads happen the order can not be guaranteed. This is a prticular problem in partitioned databases if there is no global ordering of writes.
+  
+![Consistent prefix reads](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-5%20Consisten%20prefix%20reads.png)  
+
+Solution:  
+*  The solution is to make sure that any writes that are related to the each others are written to the same partition.
+
 ### Multi-Leader  
 ### Leaderless
