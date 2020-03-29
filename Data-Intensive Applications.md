@@ -12,7 +12,7 @@
       - [Problems with Replication Lag](#problems-with-replication-lag)
         * [Read your own writes(Read-after-write)](#read-your-own-writes-read-after-write-)
         * [Monotonic Reads](#monotonic-reads)  
-        * [Consistent Prefix Reads](consistent-prefix-reads)
+        * [Consistent Prefix Reads](#consistent-prefix-reads)
     + [Multi-Leader](#multi-leader)
     + [Leaderless](#leaderless)
 
