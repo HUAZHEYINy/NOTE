@@ -9,6 +9,8 @@
       - [Handle Followers Failure](#handle-followers-failure)
       - [Handle Leader Failure](#handle-leader-failure)
       - [Implementation of Replication Logs](#implementation-of-replication-logs)
+      - [Problems with Replication Lag](#problems-with-replication-lag)
+        * [Read your own writes(Read-after-write)](#read-your-own-writes-read-after-write-)
     + [Multi-Leader](#multi-leader)
     + [Leaderless](#leaderless)
 
@@ -82,6 +84,20 @@ Problems?
 * Logical (row-based) log replication - Similar to WAL but the log its in different format which provides more flexibility.  
 * Trigger-based replication - e.g Dynamodb Streaming.  
 Resources: https://www.databasejournal.com/features/mysql/article.php/3922266/Comparing-MySQL-Statement-Based-and-Row-Based-Replication.htm
-  
+    
+#### Problems with Replication Lag    
+* Eventual Consistency: Read does not guarantee to return the up-to-date data after writes (tolerate some delays).  
+* Read-after-write: Read guarantee to return the up-to-date data after writes.  
+
+##### Read your own writes(Read-after-write)    
+Problem: When the user writes the data then it needs to see the result immediately. e.g Update twitter profile. 
+
+![read-after-write problem](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-3%20Raed-after-write%20consistency.png)  
+Solution:  
+* Read from leader: when reading something that the user modified then from leader otherwise from followers.  
+* Read from leader if the read SLA is less than x seconds. e.g One minute after the user modified the profile, read from followers. Less than 1 minute then from leader.  
+* Read based on timestamp: e.g Record the timestamp of last write, when read if the machine data has older timestamp than the write one then read from leader or other followers or wait.
+
+
 ### Multi-Leader  
 ### Leaderless
