@@ -11,12 +11,23 @@
       - [Implementation of Replication Logs](#implementation-of-replication-logs)
       - [Problems with Replication Lag](#problems-with-replication-lag)
         * [Read your own writes(Read-after-write)](#read-your-own-writes-read-after-write-)
-        * [Monotonic Reads](#monotonic-reads)  
+        * [Monotonic Reads](#monotonic-reads)
         * [Consistent Prefix Reads](#consistent-prefix-reads)
     + [Multi-Leader](#multi-leader)
+      - [Use Cases](#use-cases)
+        * [Multi-datacenter operation](#multi-datacenter-operation)
+        * [Client with offline operation](#client-with-offline-operation)
+        * [Collaborative editing](#collaborative-editing)
+      - [Handling Write Conflicts](#handling-write-conflicts)
+        * [Synchronous Conflict Detection](#synchronous-conflict-detection)
+        * [Conflict Avoidance](#conflict-avoidance)
+        * [Converging Toward a Consistent State](#converging-toward-a-consistent-state)
+        * [Custom Conflict Resolution Logic](#custom-conflict-resolution-logic)
+      - [Multi-Leader Replication Topologies](#multi-leader-replication-topologies)
     + [Leaderless](#leaderless)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Charter 5 - Replicaiton  
   
@@ -122,5 +133,51 @@ Problem: When the writes are in certain order but when the reads happen the orde
 Solution:  
 *  The solution is to make sure that any writes that are related to the each others are written to the same partition.
 
-### Multi-Leader  
+### Multi-Leader    
+Why Multi-Leader?  
+Compare to Single leader, it can accept more writes as well as increase the avalibility.   
+#### Use Cases  
+##### Multi-datacenter operation  
+![Multi-datacenter replications](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-6%20multi-leader%20replication%20dc.png)  
+
+* Performance  
+Multi-leaders allow us to place the host close to the end users geographically. The leader replication in different dc can be done asynchronously.  
+* Tolerance of dc outage.  
+* Tolerance of network problems.  
+##### Client with offline operation    
+E.g Calendar app need to sync between phone/mac etc. Each device can act as one dc. (CouchDB)  
+##### Collaborative editing  
+Similar to the offline operation. 
+  
+#### Handling Write Conflicts  
+![Handle Write Conflict](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-7%20write%20conflict.png)  
+##### Synchronous Conflict Detection  
+Make the write request synchronous and wait it to be replicated across all leaders.  
+##### Conflict Avoidance  
+Lock the write and only allow one user to write in one place. Achiving this by ensure all requests come to one host.  
+##### Converging Toward a Consistent State  
+Basically, converge the final result.   
+* Last write wins.  
+* Give each replica a unique Id and use the result that came from higher unique id one.  
+* Take all value and concatenate them.  
+* Take all value and ask the user to resolve it.  
+##### Custom Conflict Resolution Logic 
+* On write: allow the user to specify the way they want to resolve the conflict.  
+* On read: provide versioning for the data that has conflict.
+  
+#### Multi-Leader Replication Topologies  
+A *replication topology* describes the communication paths along which writes are propagated from one node to another.  
+  
+![Example Topologies](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-8%20Topologies.png)  
+* Circular Topology  
+Each node receives writres from one node and forwards those writes plus any writes of its own to one other node.  
+* Star Topology  
+One desinated root node forwards writes to all of the other nodes.  
+* All-to-all Topology  
+All pass to all.  
+  
+Issue may have:   
+![Multi-leader replication issue](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-9%20Multi-leader%20issue.png)  
+*Detecting Concurrent Writes*
+  
 ### Leaderless
