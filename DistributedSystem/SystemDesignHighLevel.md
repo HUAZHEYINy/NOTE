@@ -31,7 +31,7 @@ The principles are 1. make sure it solves the problems 2. from top to down 3. ma
 
 2. Detail the high level design.   
 	* Make Technical Decisions    
-		* [Database Schema](https://github.com/HUAZHEYINy/NOTE/blob/master/ChooseARightDB.md)
+		* [Database Schema](https://github.com/HUAZHEYINy/NOTE/blob/master/DatabaseRelated/ChooseARightDB.md)
 		* Database Type - NoSql/Sql    
 		* etc...  
 	* API Definitions  
