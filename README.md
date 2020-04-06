@@ -1,5 +1,7 @@
 ## What  
-This is a note repository.   
+This is a note repository.     
+
+![Welcome](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Other/welcome.png)
 ## Resources    
 ### Basic Computer Science  
 1. [Algorithms & DataStructrure](https://github.com/HUAZHEYINy/NOTE/blob/master/Algorithm%26DataStructure.md)  
