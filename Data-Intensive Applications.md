@@ -25,8 +25,12 @@
         * [Custom Conflict Resolution Logic](#custom-conflict-resolution-logic)
       - [Multi-Leader Replication Topologies](#multi-leader-replication-topologies)
     + [Leaderless](#leaderless)
+      - [Writeing to the Database When a Node Is Down](#writeing-to-the-database-when-a-node-is-down)
+        * [Quorums for reading and writing](#quorums-for-reading-and-writing)
+        * [Sloppy Quorums and Hinted Handoff](#sloppy-quorums-and-hinted-handoff)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 # Charter 5 - Replicaiton  
@@ -181,3 +185,22 @@ Issue may have:
 *Detecting Concurrent Writes*
   
 ### Leaderless
+The clients directly send its writes to several replicas.  
+#### Writing to the Database When a Node Is Down  
+![A quorum write, read and read repair after a node outage](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-10%20A%20quorum%20write%2C%20quorum%20read%2C%20and%20read%20repair%20after%20a%20node%20outage.png)  
+  
+##### Read repair and anti-entropy    
+* Read repair - When a client makes a read from several nodes in parallel, it can detect any stale response and fix the stale data by writing the new data to the stale node.  
+* anti-entropy process - Have a background process that constantly looks for differences in the data between replicas and copies any missing data from one replica to another.  
+  
+##### Quorums for reading and writing  
+Define  
+* total nodes : n
+* every writes must be confirmed by the number of nodes : w  
+* every read must be confirmed by the number of nodes : r    
+When w + r > n, then we can guarantee that at least one of the r nodes must be up to date.  
+
+![quorum write/read](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/5-11%20if%20w%2Br%2C%20at%20least%20one%20of%20the%20r%20replicas%20you%20read%20from%20must%20have%20seen%20the%20most%20recent%20successful%20write.png)  
+##### Sloppy Quorums and Hinted Handoff  
+* Sloppy quorum - writes and reads still require w and r successful respnses, but those may include nodes that are not among the designated n.  
+* Hinted handoff - Any writes that one node temporarily accepted on behalf of another node are sent to the appropriate "home" node.
