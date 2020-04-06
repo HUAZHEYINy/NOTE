@@ -44,7 +44,7 @@ for each edg(u, v)
     Union(u, v)  
 ``` 
 ##### Code  
-[HashMapImplementation](https://github.com/HUAZHEYINy/NOTE/blob/master/Codes/src/DisjointSet.java)  
+[HashMapImplementation](https://github.com/HUAZHEYINy/NOTE/tree/master/BasicComputerScience/Codes/src/DisjoinSet)  
   
 ##### Img  
 1/ ![Disjoint Set Steps](https://media.geeksforgeeks.org/wp-content/uploads/Linked_List_representation_of_Disjoint_Set_Data_Structures_2.jpg)  
@@ -106,7 +106,7 @@ BinarySearch(array, target)
     
   return -1 
 ```     
-[Java Implementation](https://github.com/HUAZHEYINy/NOTE/blob/master/Codes/src/Search/BinarySearch/BinarySearch.java)
+[Java Implementation](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Search/BinarySearch/BinarySearch.java)
 
 ## Other
 ### Dynamic Programming ???
@@ -116,5 +116,5 @@ BinarySearch(array, target)
 * Use additional memory to save computation time. - Time-Memory Trade-Off.
 ##### Example  
 * https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture12.pdf   
-* [Code]()  
+* [Code](https://github.com/HUAZHEYINy/NOTE/tree/master/BasicComputerScience/Codes/src/DynamicProgramming)  
 * [https://www.cnblogs.com/wkfvawl/p/9372372.html](https://www.cnblogs.com/wkfvawl/p/9372372.html)
