@@ -24,18 +24,19 @@ Use Hash function to calculate the hash for each key and use the hash of key to 
 Advantage: avoid the hot key by evenly distributing the key to partition.  
 Disadvatage: The data are not scattered (not sorted)  
 
-![6-3 Partition by hash of key]()  
+![6-3 Partition by hash of key](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/6-3%20Partitoning%20by%20hash%20of%20key.png)  
 
 ## Paritioning and Secondary Indexes  
   
 ### Partitioning Secondary Indexes by Document  
-!(6-4 Partitioning secondary indexes by document)[]  
+![6-4 Partitioning secondary indexes by document](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/6-4%20Partitioning%20secondary%20indexes%20by%20document.png)  
 Local Index: The index is stored in the same partition of it's primary document. In other words, we only need to dela with the partition that contains the document ID that we are writing.  
   
 Problem? The approach of querying reuqires searching on all partitions and that is quite expensive. We call this approach scatter/gather. 
 
 ### Partitioning Secondary Indexes by Term  
- !(6-5 Partitioning secondary indexes by term)[]
+ ![6-5 Partitioning secondary indexes by term](https://github.com/HUAZHEYINy/NOTE/blob/master/images/Data-intensive-App/6-5%20Partitioning%20secondary%20indexes%20by%20term.png)  
+ 
 Gobal Index: index and the primary document are totally separate.  
   
 Problem? The write of global index may be expensive as it has to find the location of index.
