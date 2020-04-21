@@ -15,12 +15,17 @@
   * [Binary Search](#binary-search)
       - [What](#what-2)
       - [Pseudo Code](#pseudo-code-2)
+- [Sort](#sort)
+  * [Seleciton Sort](#seleciton-sort)
+      - [What](#what-3)
+      - [Pseudo Code](#pseudo-code-3)
 - [Other](#other)
   * [Dynamic Programming ???](#dynamic-programming----)
-      - [What](#what-3)
+      - [What](#what-4)
       - [Example](#example)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
   
 ## Data Structure
@@ -106,8 +111,31 @@ BinarySearch(array, target)
     
   return -1 
 ```     
-[Java Implementation](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Search/BinarySearch/BinarySearch.java)
+[Java Implementation](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Search/BinarySearch/BinarySearch.java)  
+  
+## Sort  
+### Seleciton Sort  
+##### What  
+Simple in-place sort algorithm which takes O(n^2) time.
+##### Pseudo Code    
+For each ele, start from the left most, replace it with the smallest ele for the elements on its right unles it's smallest already.  
 
+```  
+SelectionSort(array)  
+  for i = 0 to array.len    
+    minIndex = i
+    for j = i + 1 to array.len  
+      if array[j] < array[minIndex]
+        minIndex = j
+        
+    if minIndx != i
+        # Swap the array[i] with array[minIndx]  
+        temp = array[minIndx]
+        array[minIndx] = array[i]  
+        array[i] = temp
+```
+https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm
+  
 ## Other
 ### Dynamic Programming ???
 ##### What  
