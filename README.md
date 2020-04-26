@@ -12,7 +12,7 @@ This is a note repository.
 2. [Load Balancing](https://github.com/HUAZHEYINy/NOTE/blob/master/LoadBalancer.md) - TBD
 
 ### Data Related 
-1. [Reading Notes - Designing Data-Intensive Applicaiton](https://github.com/HUAZHEYINy/NOTE/blob/master/DatabaseRelated/Data-Intensive%20Applications.md)  
+1. [Reading Notes - Designing Data-Intensive Applicaitonhttps://github.com/HUAZHEYINy/NOTE/tree/master/DatabaseRelated/Designing%20Data-Intensive%20Applications)  
   
 2. [Optimistic Locking & Perssismistic Locking](https://github.com/HUAZHEYINy/NOTE/blob/master/DatabaseRelated/LockingOptimistic%26Pessismistic.md)  
   
