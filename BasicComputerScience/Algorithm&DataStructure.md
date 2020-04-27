@@ -137,11 +137,19 @@ SelectionSort(array)
 https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm
   
 ## Other
-### Dynamic Programming ???
+### Dynamic Programming
 ##### What  
 * Method used to solve probelm by combining the solutions to subproblems.
 * Applicable when the sub-problems can be nested recursively inside larger problems. Means the larger problem can be decomposed to sub-problems.    
-* Use additional memory to save computation time. - Time-Memory Trade-Off.
+* Use additional memory to save computation time. - Time-Memory Trade-Off.  
+  
+##### Key Concepts  
+*All recursion problems can be solved by DP* - compare to recursion(solve all sub-problems which includes the sub-problems have been solved previously), DP will store the resulve of sub-problem and re-use it.   
+    
+##### Key Steps  
+###### Recursion  
+1. Find *Exit Condition* - know when to return.  
+2. Find what needed to be pass to next iteration.
 ##### Example  
 * https://web.stanford.edu/class/archive/cs/cs161/cs161.1168/lecture12.pdf   
 * [Code](https://github.com/HUAZHEYINy/NOTE/tree/master/BasicComputerScience/Codes/src/DynamicProgramming)  
