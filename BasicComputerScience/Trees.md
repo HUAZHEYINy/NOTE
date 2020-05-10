@@ -67,8 +67,10 @@
 
 ### 树的遍历    
 
-#### 深度优先遍历  
-![树的深度遍历]()  
+#### 深度优先遍历    
+
+![](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Imgs/tree-traversal.jpg)   
+
 * 前序遍历 -  先根遍历  
 ```  
 　１．拜访根根　　
