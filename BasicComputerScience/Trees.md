@@ -112,8 +112,8 @@
 ### 关于树的一些算法题 　　
 (以下问题都默认使用二叉树)  
   
-* 深度优先遍历的代码实现.  
-* 广度优先遍历的代码实现.
+* [深度优先遍历的代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/DFS.java)  
+* [广度优先遍历的代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/BFS.java)
 * 给一个根节点，返回树的深度.
 * 给一个根节点和一个值ｘ,　判定ｘ是否存在树中.　
 * 给一个根节点和一个值ｘ，判定ｘ的深度.
