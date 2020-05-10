@@ -110,7 +110,14 @@
 ```
   
 ### 关于树的一些算法题 　　
-(以下问题都默认使用二叉树)  
+(以下问题都默认使用二叉树)    
+```  
+不要被各种有关树的算法吓跑，掰开揉碎了之后发现套路很简单。使用递归进行DFS或者使用Queue进行BFS。  
+递归的话按照递归的套路  
+1. 定义什么情况下该停止/返回  
+2. 定义什么情况下移动到一下层递归  
+3. 定义递归的初始状态.
+```
   
 * [深度优先遍历的代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/DFS.java)  
 * [广度优先遍历的代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/BFS.java)
