@@ -11,10 +11,6 @@ public class TreeNode {
         this.val = val;
     }
 
-    public void printTree(TreeNode root) {
-      //TBD - want print a user friendly tree.
-    }
-
     // auto generated.
     public int getVal() {
         return val;
