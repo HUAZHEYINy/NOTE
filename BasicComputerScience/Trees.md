@@ -114,11 +114,11 @@
   
 * [深度优先遍历的代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/DFS.java)  
 * [广度优先遍历的代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/BFS.java)
-* 给一个根节点，返回树的深度.
-* 给一个根节点和一个值ｘ,　判定ｘ是否存在树中.　
-* 给一个根节点和一个值ｘ，判定ｘ的深度.
-* 给一个根节点和一个值ｘ,　返回ｘ的父节点.  
-* 给一个根节点,　翻转二叉树.
+* [给一个根节点，返回树的深度](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/FindMaxDepth.java)
+* [给一个根节点和一个值ｘ,　判定ｘ是否存在树中](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/FindXFromTree.java)　
+* [给一个根节点和一个值ｘ，判定ｘ的深度](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/FindXFromTree.java)
+* [给一个根节点和一个值ｘ,　返回ｘ的父节点](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/FindXFromTree.java)  
+* [给一个根节点,　翻转二叉树](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Traversal/ReverseBinaryTree.java)
 
 ### 索引　　
 * https://www.cs.cmu.edu/~tcortina/15-121sp10/Unit06A.pdf  
