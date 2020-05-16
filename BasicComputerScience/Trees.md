@@ -71,6 +71,22 @@
 5. 从任意节点到其每个叶子的所有简单路径都包含相同数量的黑色节点  
 *另外它的节点的数据结构包含了该节点的颜色*
   
+  
+#### 字典树 Trie 
+又称前缀树, 能被用来快速搜索字符串 比如查英文字典时，我们是按照单词各个字母的顺序挨个查找 - words 我们会按照顺序 w -> o -> r -> d -> s.   
+在计算机中我们可以使用树型结构来对单词进行存储以便于在查找的时候方便。  
+ 
+![](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Imgs/TrieDiagram.svg)  
+一些性质:  
+1. 根节点为空  
+2. 每个节点仅存储它的孩子 
+3. 从根到节点A,所有字符组成的字符串称为A节点的内容  
+
+
+一些资料
+https://www.interviewcake.com/concept/java/trie  
+https://www.baeldung.com/trie-java
+
 #### 其他树
 * *B-Tree* 
 * etc.  
