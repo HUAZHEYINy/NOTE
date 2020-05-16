@@ -76,11 +76,16 @@
 又称前缀树, 能被用来快速搜索字符串 比如查英文字典时，我们是按照单词各个字母的顺序挨个查找 - words 我们会按照顺序 w -> o -> r -> d -> s.   
 在计算机中我们可以使用树型结构来对单词进行存储以便于在查找的时候方便。  
  
-![](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Imgs/TrieDiagram.svg)  
-一些性质:  
+![](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Imgs/TrieDiagram.svg)    
+  
+```  
+上图是在一个Trie中插入单词 {"APP", "APPLE", "B", "BI", "CA"} 得出的结构. 从上图可以看出，我们有以下所有prefix的组合 {"A", "B", "C", "AP", "APP", "APPL", "APPLE", "BI", "CA"}. 但是在字典里面APP 和 APPLE 是两个不一样的单词，但是他们都存在这个prefix tree中，这时可以使用 特殊节点来作为一个单词的结束节点 - 如上图当我们结束插入 APP 的时候我们给 最后一个P的插入一个特殊的孩子节点.
+```
+
+总结一些性质:  
 1. 根节点为空  
 2. 每个节点仅存储它的孩子 
-3. 从根到节点A,所有字符组成的字符串称为A节点的内容  
+3. 从根到节点A,所有字符组成的字符串称为A节点的内容 
 
 
 一些资料
