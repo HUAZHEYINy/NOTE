@@ -89,8 +89,11 @@
 
 
 一些资料
-https://www.interviewcake.com/concept/java/trie  
-https://www.baeldung.com/trie-java
+https://www.interviewcake.com/concept/java/trie    
+
+https://www.baeldung.com/trie-java  
+  
+[代码实现](https://github.com/HUAZHEYINy/NOTE/blob/master/BasicComputerScience/Codes/src/Trees/Others/Trie.java)
 
 #### 其他树
 * *B-Tree* 
