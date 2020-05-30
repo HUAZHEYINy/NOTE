@@ -134,7 +134,36 @@ SelectionSort(array)
         array[minIndx] = array[i]  
         array[i] = temp
 ```
-https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm
+https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorithm.htm 
+
+### Topological Sort　拓扑排序  
+#### 什么是拓扑排序
+有向图的拓扑排序是其顶点的线性排序, 对于从顶点u到ｖ的每个有向边uv,ｕ都排在ｖ之前.　　 
+**注意**  
+1. 当且仅当图中没有环的时候(有[向无环图](https://zh.wikipedia.org/wiki/%E6%9C%89%E5%90%91%E6%97%A0%E7%8E%AF%E5%9B%BE))，才能进行拓扑排序。  
+2. 任何有向无环图至少有一个拓扑排序.  
+#### 算法  
+##### 卡恩算法  　
+当运行完成之后如果原图中还存在边的话那就说明原图中有环, 即无拓扑排序.  
+时间复杂度 Big-O = O(V+E) 即　顶点数和边数的总和.
+空间复杂度 Big-O = O(V) 即　顶点总数.
+```Java  
+L ← Empty list that will contain the sorted elements
+S ← Set of all nodes with no incoming edge
+
+while S is not empty do
+    remove a node n from S
+    add n to tail of L
+    for each node m with an edge e from n to m do
+        remove edge e from the graph
+        if m has no other incoming edges then
+            insert m into S
+
+if graph has edges then
+    return error   (graph has at least one cycle)
+else 
+    return L   (a topologically sorted order)
+```
   
 ## Other
 ### Dynamic Programming
