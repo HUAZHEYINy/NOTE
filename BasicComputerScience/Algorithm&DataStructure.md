@@ -144,7 +144,9 @@ https://www.tutorialspoint.com/data_structures_algorithms/selection_sort_algorit
 2. 任何有向无环图至少有一个拓扑排序.  
 #### 算法  
 ##### 卡恩算法  　
-当运行完成之后如果原图中还存在边的话那就说明原图中有环, 即无拓扑排序.  
+把入度为0的节点放到L中，然后从图中移除所有和这些点相连的边,再寻找图中入度为０的点加入L,移除和这些点相连的边. 直到找不到入度为０的点.  
+当运行完成之后如果原图中还存在边的话那就说明原图中有环, 即无拓扑排序.    
+
 时间复杂度 Big-O = O(V+E) 即　顶点数和边数的总和.
 空间复杂度 Big-O = O(V) 即　顶点总数.
 ```Java  
@@ -163,6 +165,32 @@ if graph has edges then
     return error   (graph has at least one cycle)
 else 
     return L   (a topologically sorted order)
+```  
+##### 深度优先遍历  
+
+时间复杂度 Big-O = O(V+E) 即　顶点数和边数的总和.
+空间复杂度 Big-O = O(V) 即　顶点总数.
+
+```Java  
+L ← Empty list that will contain the sorted nodes
+while exists nodes without a permanent mark do
+    select an unmarked node n
+    visit(n)
+
+function visit(node n)
+    if n has a permanent mark then
+        return
+    if n has a temporary mark then
+        stop   (not a DAG)
+
+    mark n with a temporary mark
+
+    for each node m with an edge from n to m do
+        visit(m)
+
+    remove temporary mark from n
+    mark n with a permanent mark
+    add n to head of L
 ```
   
 ## Other
