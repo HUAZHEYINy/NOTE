@@ -26,6 +26,8 @@ public class Trie {
         // Special node that used to mark the end of the word.
         // e.g APPLE and APP share the same prefix APP and we should
         // have a way to distinguish them.
+        // Alternatively, we can add one more attribute to the Trie class to store
+        // the string value at the last position of the input word.
         children.put('.', new TrieNode());
     }
 
